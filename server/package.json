@@ -1,0 +1,26 @@
+{
+  "name": "hello-grpc-web-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "honmaaax",
+  "license": "UNLICENCED",
+  "private": true,
+  "scripts": {
+    "start": "node-hot dist",
+    "build": "webpack",
+    "proto": "cp -r ../protocol/ ./dist/proto"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "node-hot-loader": "^1.12.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
+    "grpc": "^1.16.1"
+  }
+}

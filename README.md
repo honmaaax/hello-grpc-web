@@ -1,6 +1,6 @@
 # hello-grpc-web
 
-DockerでgRPC-Web(TypeScript)で試すための環境です。
+DockerでgRPC-Web(Vue.js)で試すための環境です。
 
 ## 使い方
 
@@ -16,14 +16,13 @@ http://localhost:3000
 ## コンテナの構成
 
 - client
-  - React
-  - TypeScript
+  - Vue.js
+  - JavaScript
   - gRPC-Web
 - proxy
   - Envoy
 - server
-  - go 1.11 (パッケージ管理に Modules を使用)
-  - fresh (ホットリロード用)
+  - Node.js
 
 ## Mac でのプロトコル定義ファイルのコンパイルの例
 

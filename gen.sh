@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CLIENT_OUTDIR=client/src/helloworld
+CLIENT_OUTDIR=client/src/grpc
 SERVER_OUTPUT_DIR=server/helloworld
 
 mkdir -p ${CLIENT_OUTDIR} ${SERVER_OUTPUT_DIR}
@@ -12,5 +12,4 @@ mkdir -p ${CLIENT_OUTDIR} ${SERVER_OUTPUT_DIR}
 #  --go_out => helloworld.pb.go
 protoc --proto_path=protocol helloworld.proto \
     --js_out=import_style=commonjs:${CLIENT_OUTDIR} \
-    --grpc-web_out=import_style=typescript,mode=grpcwebtext:${CLIENT_OUTDIR} \
-    --go_out=plugins=grpc:${SERVER_OUTPUT_DIR}
+    --grpc-web_out=import_style=commonjs,mode=grpcwebtext:${CLIENT_OUTDIR}
